@@ -1,0 +1,44 @@
+# Dependências
+/node_modules
+/package-lock.json
+/yarn.lock
+
+# Configurações do IDE
+.idea
+.vscode
+*.sublime-workspace
+
+# Arquivos de build
+/dist
+/build
+
+# Arquivos de cache do npm
+.npm
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Arquivos temporários do sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos de ambiente específicos do projeto
+.env
+.env.local
+.env.*.local
+
+# Diretório público pode conter assets gerados e index.html
+/public/
+
+# Diretórios de cache e saída de editores de texto/IDEs
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Configurações locais específicas
+/cypress/
+/cypress.json
