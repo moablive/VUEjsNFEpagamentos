@@ -24,11 +24,6 @@ yarn-error.log*
 .DS_Store
 Thumbs.db
 
-# Arquivos de ambiente específicos do projeto
-.env
-.env.local
-.env.*.local
-
 # Diretório público pode conter assets gerados e index.html
 /public/
 
