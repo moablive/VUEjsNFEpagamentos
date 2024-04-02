@@ -40,7 +40,7 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
-import { getEvento } from '../services/eventServices.js';
+import { getEvento } from '../services/eventServices.ts';
 
 const eventos = ref([]);
 const router = useRouter();

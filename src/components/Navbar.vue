@@ -11,6 +11,9 @@
         <li class="nav-item">
           <router-link to="/vendedor" class="nav-link">Vendedor</router-link>
         </li>
+        <li class="nav-item">
+          <router-link to="/CadastrarUsuario" class="nav-link">Cadastrar Usuario</router-link>
+        </li>
       </ul>
     </div>
   </nav>

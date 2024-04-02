@@ -40,7 +40,7 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
-import { getEventoByID, marcarComoPago, marcarComoNaoPago } from '../services/eventServices.js';
+import { getEventoByID, marcarComoPago, marcarComoNaoPago } from '../services/eventServices.ts';
 
 const router = useRouter();
 const evento = ref(null);
