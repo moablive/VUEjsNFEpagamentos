@@ -9,7 +9,7 @@ export async function getEvento(): Promise<EventModel[]> {
     return response.data;
   }
   catch (error) {
-  throw new Error('Erro ao buscar eventos:' + error);
+    throw new Error('Erro ao buscar eventos: ' + error);
   }
 }
 
@@ -17,10 +17,9 @@ export async function getEventoByID(eventId: number): Promise<EventModel> {
   try {
     const response = await axios.get(`${urlAPI}/api/evento/${eventId}`);
     return response.data;
-    } 
-
+  } 
   catch (error) {
-    throw new Error('Erro ao obter evento:' + error);
+    throw new Error('Erro ao obter evento: ' + error);
   }
 }
 
@@ -30,4 +29,14 @@ export async function marcarComoPago(eventId: number) {
 
 export async function marcarComoNaoPago(eventId: number) {
   return await axios.post(`${urlAPI}/api/evento/NaoPagar/${eventId}`);
+}
+
+
+export async function getVendedorPorCnpj(cnpj: string, idEvento: number): Promise<string> {
+  try {
+    const response = await axios.get(`${urlAPI}/api/evento/VendedorPorCnpj/${cnpj}/${idEvento}`);
+    return response.data;
+  } catch (error) {
+    throw new Error(`Erro ao buscar o vendedor pelo CNPJ ${cnpj} e ID do evento ${idEvento}: ` + error);
+  }
 }

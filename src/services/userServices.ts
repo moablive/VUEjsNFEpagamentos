@@ -12,4 +12,3 @@ export async function cadastrarUsuario(userLogin: UserLogin): Promise<UserLogin>
     throw new Error('Erro ao buscar eventos:' + error);
     }
 }
-  

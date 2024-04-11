@@ -9,6 +9,9 @@
           <router-link to="/Evento" class="nav-link">Evento</router-link>
         </li>
         <li class="nav-item">
+          <router-link to="/Clientes" class="nav-link">Clientes</router-link>
+        </li>
+        <li class="nav-item">
           <router-link to="/vendedor" class="nav-link">Vendedor</router-link>
         </li>
         <li class="nav-item dropdown">
