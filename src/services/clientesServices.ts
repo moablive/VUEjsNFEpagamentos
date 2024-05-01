@@ -1,5 +1,5 @@
 import axios from "axios";
-import ClientesMODEL from "../Models/EventMODEL.ts";
+import { ClientesMODEL } from "../Models/ClientesMODEL";
 
 var urlAPI = import.meta.env.VITE_urlEventLocalHost;
 

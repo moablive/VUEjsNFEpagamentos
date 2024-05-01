@@ -16,3 +16,4 @@ export interface ClientesMODEL {
     COMPLEMENTO: string;
     CEP: string;
 }
+export default ClientesMODEL;
