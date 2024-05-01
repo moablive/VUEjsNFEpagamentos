@@ -58,7 +58,7 @@ onMounted(async () => {
       if (evento.cnpj && evento.id) {
         try {
           let nomeVendedor = await getVendedorPorCnpj(evento.cnpj, evento.id);
-          evento.nomeVendedor = nomeVendedor; // Atribui o nome do vendedor ao evento
+          evento.nomeVendedor = nomeVendedor;
         } catch (error) {
           console.error(`Erro ao buscar o nome do vendedor para o evento ID ${evento.id} e CNPJ ${evento.cnpj}:`, error);
           evento.nomeVendedor = 'Nome não encontrado';

@@ -6,6 +6,7 @@ import Home from "./components/home/Home.vue"
 //=> src/components/event
 import Evento from './components/event/Event.vue'
 import EventoDetail from './components/event/EventoDetail.vue'
+import EventoPagamento from './components/event/EventoPagamento.vue'
 
 //=> src/components/partner
 import Vendedor from './components/partner/Vendedor.vue'
@@ -21,6 +22,7 @@ const routes = [
     { path: '/', component: Home },
     { path: '/Evento', component: Evento },
     { path: '/evento/:id', component: EventoDetail, name: 'EventoDetail' },
+    { path: '/evento/:id/pagamento', component: EventoPagamento, name: 'EventoPagamento' },
     { path: '/vendedor', component: Vendedor },
     { path: '/Clientes', component: Clientes },
     { path: '/CadastrarUsuario', component: CadastrarUsuario, name: 'CadastrarUsuario'},

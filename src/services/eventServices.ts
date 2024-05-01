@@ -31,7 +31,6 @@ export async function marcarComoNaoPago(eventId: number) {
   return await axios.post(`${urlAPI}/api/evento/NaoPagar/${eventId}`);
 }
 
-
 export async function getVendedorPorCnpj(cnpj: string, idEvento: number): Promise<string> {
   try {
     const response = await axios.get(`${urlAPI}/api/evento/VendedorPorCnpj/${cnpj}/${idEvento}`);

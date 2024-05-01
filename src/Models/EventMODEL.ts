@@ -12,3 +12,4 @@ export interface EventModel {
   CODIGO_VENDEDOR: number;
   NomeVendedor: string;
 }
+export default EventModel;

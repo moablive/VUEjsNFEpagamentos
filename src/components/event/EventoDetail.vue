@@ -18,16 +18,23 @@
             <p class="card-text"><strong>Endereço:</strong> {{ evento.endereco }}</p>
             <p class="card-text"><strong>Status:</strong> {{ evento.status }}</p>
             <p class="card-text"><strong>Status de Pagamento:</strong> {{ evento.status_pagamento }}</p>
-            
+
             <!-- Botão para marcar como pago -->
-            <button class="btn btn-success me-2" @click="marcarComoPagoEvento(evento.id)" v-if="evento.status_pagamento !== 'Pago'">
+            <button class="btn btn-success me-2" @click="marcarComoPagoEvento(evento.id)"
+              v-if="evento.status_pagamento !== 'Pago'">
               Marcar como Pago
             </button>
-            
+
             <!-- Botão para marcar como não pago -->
-            <button class="btn btn-danger" @click="marcarComoNaoPagoEvento(evento.id)" v-if="evento.status_pagamento !== 'Não Pago'">
+            <button class="btn btn-danger" @click="marcarComoNaoPagoEvento(evento.id)"
+              v-if="evento.status_pagamento !== 'Não Pago'">
               Marcar como Não Pago
             </button>
+
+            <!-- Botão para anexar pagamento -->
+            <router-link :to="'/evento/' + evento.id + '/pagamento'" class="btn btn-primary">
+              Anexar Pagamento
+            </router-link>
           </div>
         </div>
       </div>
@@ -65,7 +72,7 @@ const formatarData = (data) => {
 const marcarComoPagoEvento = async (eventId) => {
   try {
     await marcarComoPago(eventId);
-    window.location.reload(); 
+    window.location.reload();
   } catch (error) {
     console.error('Erro ao marcar o evento como pago:', error);
   }
@@ -75,7 +82,7 @@ const marcarComoPagoEvento = async (eventId) => {
 const marcarComoNaoPagoEvento = async (eventId) => {
   try {
     await marcarComoNaoPago(eventId);
-    window.location.reload(); 
+    window.location.reload();
   } catch (error) {
     console.error('Erro ao marcar o evento como não pago:', error);
   }
